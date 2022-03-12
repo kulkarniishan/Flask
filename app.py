@@ -9,7 +9,7 @@ def index():
 @app.route('/template')
 def template():
     print(request.query_string)
-    return render_template("index.jinja",name=request.args.get('name'))
+    return render_template("index.html",name=request.args.get('name'))
 
 if(__name__=="__main__"):
     app.run(debug=True)
